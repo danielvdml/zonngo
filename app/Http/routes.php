@@ -23,7 +23,8 @@ Route::get('demo/getListModelo/{Category}/{Marca}',["uses"=>"ProductosController
 Route::get('demo/getListItems/{Category}/{Marca}/{Modelo}',["uses"=>"ProductosController@getListItems","as"=>"getListItems"]);
 Route::get('demo/getItems/{keyword}',['uses'=>"ProductosController@getItems","as"=>"getItems"]);
 Route::get('demo/getList',['uses'=>"ProductosController@getList","as"=>"getList"]);
+Route::get('demo/getList_',['uses'=>"ProductosController@getList_","as"=>"getList_"]);
 Route::get("getImage",["uses"=>"ProductosController@getImage"]);
-
+$router->resource('contacto', 'ContactoController');
 
 

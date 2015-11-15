@@ -6,6 +6,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 	<title>Zonngo</title>
+	<link rel="icon" href="../img/zonngo_.png"  sizes="16x16">
 	<meta content=" | " name="description" />
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<link href="http://gmpg.org/xfn/11" rel="profile" />
@@ -203,10 +204,10 @@ body { font-weight: normal;}
 <div class="span9" data-motopress-static-file="static/static-nav.html" data-motopress-type="static"><!-- BEGIN MAIN NAVIGATION -->
 <nav class="nav nav__primary clearfix">
 <ul class="sf-menu" id="topnav">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-2640"><a href="#QueNecesitas">&iquest;Que necesitas?</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-2632"><a href="contacts/index.html">Cont&aacute;ctanos</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-3494"><a href="demo/index.html">Calculador de precios</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-3490"><a href="comercial/index.html">Para empresas</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-2640"><a href={{route("index")}}>&iquest;Que necesitas?</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-2632"><a href={{route("contacto.index")}}>Cont&aacute;ctanos</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-3494"><a href={{route("demo")}}>Calculador de precios</a></li>
+	<!-- <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-3490"><a href="comercial/index.html">Para empresas</a></li> -->
 </ul>
 </nav>
 <!-- END MAIN NAVIGATION --></div>

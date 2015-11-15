@@ -35,13 +35,19 @@ class ProductosController extends Controller{
 		return array("productos"=>$productos,"estadistica"=>$estadistica);
 	}
 	function getItems($keyword){
-		$productos=DB::select('select * from productos where  CONCAT(MARCA," ",MODELO) like "%'.$keyword.'%"');
-		$estadistica=DB::select('select * from estadistica where  CONCAT(MARCA," ",MODELO) like "%'.$keyword.'%"');
+		$productos=DB::select('select * from productos where  CONCAT(MARCA," ",MODELO) like "%'.$keyword.'%" limit 15');
+		$estadistica=DB::select('select * from estadistica where  CONCAT(MARCA," ",MODELO) like "%'.$keyword.'%" limit 15');
 		return array("productos"=>$productos,"estadistica"=>$estadistica);
 	}
 	function getList(){
 		$productos=DB::table("productos")->groupBy("Marca")->groupBy("Modelo")->get(["Marca","Modelo"]);
 		return $productos;
+	}
+	function getList_(){
+		$Categoria=DB::table("productos")->groupBy("Categoria")->get(["Categoria"]);
+		$Marcas=DB::table("productos")->groupBy(["Categoria","Marca"])->get(["Categoria","Marca"]);
+		$Modelos=DB::table("productos")->groupBy(["Marca","Modelo"])->get(["Marca","Modelo"]);
+		return ["Categorias"=>$Categoria,"Marcas"=>$Marcas,"Modelos"=>$Modelos];
 	}
 
 	function getImage(){
@@ -55,6 +61,7 @@ class ProductosController extends Controller{
 			// }
 		});
 	}
+
 }
 
  ?>
