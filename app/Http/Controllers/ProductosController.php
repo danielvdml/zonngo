@@ -12,7 +12,18 @@ class ProductosController extends Controller{
 		return view("index");
 	}
 	function demo(){
-		return view("demo");
+		// $Tiendas=DB::table("productos")->groupBy("Origen")->get(["Origen"]);
+		// $Productos=DB::table("productos")->orderBy("Precio","desc")->take(100)->get();
+		// $Categoria=DB::table("productos")->groupBy("Marca")->get(["Categoria","Marca"]);
+		// return view("demov2",["Tiendas"=>$Tiendas,"Productos"=>$Productos,"Categoria"=>$Categoria]);
+		return "";
+	}
+	function demov2($Category="Celulares y Smartphone"){
+		
+		$Tiendas=DB::table("productos")->where("categoria","=",$Category)->groupBy("Origen")->get(["Origen"]);
+		$Productos=DB::table("productos")->where("categoria","=",$Category)->orderBy("Precio","desc")->take(100)->get();
+		$Marcas=DB::table("productos")->where("categoria","=",$Category)->groupBy("Marca")->get(["Marca"]);
+		return view("demov2",["Tiendas"=>$Tiendas,"Productos"=>$Productos,"Marcas"=>$Marcas]);
 	}
 	function demoView(){
 		return view("demoView");

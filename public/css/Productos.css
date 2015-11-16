@@ -1,0 +1,40 @@
+.Producto-nuevo{
+	background-color:  #4f96d5;
+	height: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	font-style: normal;
+	margin: 5px;
+	-webkit-background-color:  #4f96d5;
+	-webkit-height: 100%;
+	-webkit-text-align: center;
+	-webkit-font-size: 1.2em;
+	-webkit-font-style: normal;
+	-webkit-margin: 5px;
+	
+}
+.Producto-usado{
+	background: #959595;
+	height: 100%;
+	text-align: center;
+	font-size: 1.2em;
+	font-style: normal;
+	margin: 5px;
+	
+}
+.product-img{	
+	height: 2em;
+	-webkit-height: 2em;
+}
+
+.titulo{
+	color: white;
+    text-anchor: initial;
+    font-style: italic;
+    font-weight: 700;
+    padding: 15px;
+}
+
+.enlace{
+	text-decoration: none
+}
