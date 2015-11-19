@@ -176,7 +176,7 @@ body { font-weight: normal;}
 
 <p style="font-size: 16px; font-weight: 400; color: #fff;">Zonngo <strong> esta conformado por un equipo de jovenes emprendedores </strong>, que se encuentran <strong> trabajando d&iacute;a a d&iacute;a </strong> para darte las mejores precios. Nuestros datos son comparados en l&iacute;nea con diferentes web, <strong> destacamos en tasar productos electr&oacute;nicos, bienes y ra&iacute;ces. </strong>.</p>
 
-<a class="btn btn-default btn-normal btn-inline " href={{route("demo")}} target="_self" title="Calcula tus precios">CALCULADOR DE PRECIO </a>
+<a class="btn btn-default btn-normal btn-inline " href={{route("index")}} target="_self" title="Calcula tus precios">CALCULADOR DE PRECIO </a>
 
 <!-- <a class="btn btn-default btn-normal btn-inline " href="../comercial/index.html" target="_self" title="Solicita tu prueba gratuita">ZONNGO PARA EMPRESAS </a><!-- .btn --> -->
 </div>
@@ -204,9 +204,9 @@ body { font-weight: normal;}
 <div class="span9" data-motopress-static-file="static/static-nav.html" data-motopress-type="static"><!-- BEGIN MAIN NAVIGATION -->
 <nav class="nav nav__primary clearfix">
 <ul class="sf-menu" id="topnav">
-	<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-2640"><a href={{route("index")}}>&iquest;Que necesitas?</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-2640"><a href={{route("Nosotros.index")}}>&iquest;Que necesitas?</a></li>
 	<li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-2632"><a href={{route("contacto.index")}}>Cont&aacute;ctanos</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-3494"><a href={{route("demo")}}>Calculador de precios</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-3494"><a href={{route("index")}}>Calculador de precios</a></li>
 	<!-- <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-3490"><a href="comercial/index.html">Para empresas</a></li> -->
 </ul>
 </nav>

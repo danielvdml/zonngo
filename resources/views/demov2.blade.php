@@ -585,6 +585,7 @@
 							$("#body-nuevo").append("<h2>Buscando ...</h2>");
 							}
 					}
+					
 				});
 		});
 																	

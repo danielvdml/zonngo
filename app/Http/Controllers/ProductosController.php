@@ -12,13 +12,13 @@ class ProductosController extends Controller{
 		return view("index");
 	}
 	function demo(){
-		// $Tiendas=DB::table("productos")->groupBy("Origen")->get(["Origen"]);
+		$Tiendas=DB::table("productos")->groupBy("Origen")->get(["Origen"]);
 		// $Productos=DB::table("productos")->orderBy("Precio","desc")->take(100)->get();
 		// $Categoria=DB::table("productos")->groupBy("Marca")->get(["Categoria","Marca"]);
 		// return view("demov2",["Tiendas"=>$Tiendas,"Productos"=>$Productos,"Categoria"=>$Categoria]);
-		return "";
+		return view("demo",["Tiendas"=>$Tiendas]);
 	}
-	function demov2($Category="Celulares y Smartphone"){
+	function demov2($Category="Celulares"){
 		
 		$Tiendas=DB::table("productos")->where("categoria","=",$Category)->groupBy("Origen")->get(["Origen"]);
 		$Productos=DB::table("productos")->where("categoria","=",$Category)->orderBy("Precio","desc")->take(100)->get();
@@ -43,12 +43,14 @@ class ProductosController extends Controller{
 	function getListItems($Category,$Marca,$Modelo){
 		$productos=DB::table("productos")->where("categoria","=",$Category)->where("Marca","=",$Marca)->where("Modelo","=",$Modelo)->get(["Titulo","Precio","Moneda","Origen","Link","Condicion"]);
 		$estadistica=DB::table("estadistica")->where("categoria","=",$Category)->where("Marca","=",$Marca)->where("Modelo","=",$Modelo)->get(["Promedio","Max","Min","Condicion","Modelo"]);
-		return array("productos"=>$productos,"estadistica"=>$estadistica);
+		$Tiendas=DB::table("productos")->where("categoria","=",$Category)->where("Marca","=",$Marca)->where("Modelo","=",$Modelo)->groupBy("Origen")->get(["Origen"]);
+		return array("productos"=>$productos,"estadistica"=>$estadistica,"Tiendas"=>$Tiendas);
 	}
 	function getItems($keyword){
 		$productos=DB::select('select * from productos where  CONCAT(MARCA," ",MODELO) like "%'.$keyword.'%" limit 15');
 		$estadistica=DB::select('select * from estadistica where  CONCAT(MARCA," ",MODELO) like "%'.$keyword.'%" limit 15');
-		return array("productos"=>$productos,"estadistica"=>$estadistica);
+		$Tiendas=DB::select('select origen from productos where  CONCAT(MARCA," ",MODELO) like "%'.$keyword.'%" group by origen' );
+		return array("productos"=>$productos,"estadistica"=>$estadistica,"Tiendas"=>$Tiendas);
 	}
 	function getList(){
 		$productos=DB::table("productos")->groupBy("Marca")->groupBy("Modelo")->get(["Marca","Modelo"]);
@@ -58,7 +60,8 @@ class ProductosController extends Controller{
 		$Categoria=DB::table("productos")->groupBy("Categoria")->get(["Categoria"]);
 		$Marcas=DB::table("productos")->groupBy(["Categoria","Marca"])->get(["Categoria","Marca"]);
 		$Modelos=DB::table("productos")->groupBy(["Marca","Modelo"])->get(["Marca","Modelo"]);
-		return ["Categorias"=>$Categoria,"Marcas"=>$Marcas,"Modelos"=>$Modelos];
+		$Tiendas=DB::table("productos")->groupBy("Origen")->get(["Origen"]);
+		return ["Categorias"=>$Categoria,"Marcas"=>$Marcas,"Modelos"=>$Modelos,"Tiendas"=>$Tiendas];
 	}
 
 	function getImage(){

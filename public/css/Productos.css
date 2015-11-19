@@ -1,16 +1,19 @@
 .Producto-nuevo{
-	background-color:  #4f96d5;
+	background-color:  #f5af02;
+	border-color: #f5af02;
+	-webkit-background-color:  #f5af02;
+	-webkit-border-color: #f5af02;
 	height: 100%;
 	text-align: center;
 	font-size: 1.2em;
 	font-style: normal;
-	margin: 5px;
+	/*margin: 5px;*/
 	-webkit-background-color:  #4f96d5;
 	-webkit-height: 100%;
 	-webkit-text-align: center;
 	-webkit-font-size: 1.2em;
 	-webkit-font-style: normal;
-	-webkit-margin: 5px;
+	/*-webkit-margin: 5px;*/
 	
 }
 .Producto-usado{
@@ -19,10 +22,10 @@
 	text-align: center;
 	font-size: 1.2em;
 	font-style: normal;
-	margin: 5px;
+	/*margin: 5px;*/
 	
 }
-.product-img{	
+.product-img{	 
 	height: 2em;
 	-webkit-height: 2em;
 }
