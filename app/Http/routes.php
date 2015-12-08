@@ -11,16 +11,8 @@
 |
 */
 // INDEX Inicio de la Pagina
-// Route::get('/',["as"=>"index","uses"=>"ProductosController@index"]);
 
-// DEMO Calculador de Precios
-// Route::get('/demo/{Category?}',["as"=>"demo","uses"=>"ProductosController@demo"]);
 Route::get('/',["as"=>"index","uses"=>"ProductosController@demo"]);
-
-// Route::get('/demov2',["as"=>"demov","uses"=>"ProductosController@demo"]);
-// Route::get('/demov2/{Category?}',["as"=>"demov2","uses"=>"ProductosController@demov2"]);
-
-
 Route::get('getListCategory',["uses"=>"ProductosController@getListCategory","as"=>"getListCategory"]);
 Route::get('getListMarca/{Category}',["uses"=>"ProductosController@getListMarca","as"=>"getListMarca"]);
 Route::get('getListModelo/{Category}/{Marca}',["uses"=>"ProductosController@getListModelo","as"=>"getListModelo"]);

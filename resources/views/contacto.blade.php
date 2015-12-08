@@ -7,8 +7,12 @@
 		<title>Calculador de Precios</title>
 		<style type="text/css" media="screen">
 			.navbar-negro {
-			    background-color: #000000;
-			    border-color: #080808;
+			   background-color: #232f3e;
+				-ms-background-color: #232f3e;
+				-webkit-background-color: #232f3e;
+				opacity: 0.8;
+				-ms-opacity: 0.8;
+				-webkit-opacity: 0.8;
 			}
 			.dark{
 				background-color: #ffffff;
@@ -25,33 +29,58 @@
 		</style>
 	</head>
 	<body>
-	
-		<nav class="navbar navbar-negro" role="navigation" >
-			<!-- Brand and toggle get grouped for better mobile display -->
+		
+		<nav class="navbar navbar-negro  " role="navigation" style="position:fixed;width:100%;z-index:100" >
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				<div class="container-fluid">
+					<div class="col-xs-2">
+						<div class="nav navbar-nav navbar-left " style="padding-left:20%;">
+							<a class="navbar-brand" href={{route("index")}} style="padding-left:0px;padding-right:0px;padding-top:20px;">
+								
+								{!!HTML::image("img/z2.png","alt",["class"=>"img-responsive","height"=>"80%"])!!}
+								
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-7">
+						<ul class="nav navbar-nav navbar-right">
+							<li style="width:100%">
+								<div role="search" style="padding:20px;">
+									<div class="input-group input-group-md">
+										<input type="text" id="tags" class="form-control " placeholder="Buscar ...">
+										<span class="input-group-btn">
+											<button id="search"class="btn btn-default" type="button">
+											<span class=" glyphicon glyphicon-search"></span>
+											</button>
+										</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" style="padding-top:20px;">
 					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar dark"></span>
-					<span class="icon-bar dark"></span>
-					<span class="icon-bar dark"></span>
-				</button>
-				<a class="navbar-brand" href={{route("index")}}><img src="../img/zonngo.png" alt="Image" height="65px"></a>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<div class="col-xs-3">
+						<div class="collapse navbar-collapse navbar-ex1-collapse">
+							<ul class="nav navbar-nav">
+								<li class="active"><a href={{route("Nosotros.index")}}>Nosotros</a></li>
+								<li><a href={{route("Registrar.index")}}>Registrarse</a></li>
+								<li><a href={{route("Ingresar.index")}}>Ingresar</a></li>
+							</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-
-			
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse navbar-ex1-collapse" style="padding-top:20px;">
-				<ul class="nav navbar-nav navbar-right" style="font-size:Raleway">
-					<li><a class="list-white" href={{route("index")}}>¿QUE NECESITAS?</a></li>
-					<li><a class="list-white" href={{route("contacto.index")}}>CONTÁCTANOS</a></li>
-					<li><a class="list-white" href={{route("demo")}}>CALCULADOR DE PRECIOS</a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-
 		</nav>
 
 		
-		<div style="background-color: white;">
+		<div style="background-color: white;top:80px">
 			<div class="row">
 				<div class="container">
 					<div>

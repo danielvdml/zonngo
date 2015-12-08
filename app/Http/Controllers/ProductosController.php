@@ -47,9 +47,9 @@ class ProductosController extends Controller{
 		return array("productos"=>$productos,"estadistica"=>$estadistica,"Tiendas"=>$Tiendas);
 	}
 	function getItems($keyword){
-		$productos=DB::select('select * from productos where  CONCAT(MARCA," ",MODELO) like "%'.$keyword.'%" limit 15');
-		$estadistica=DB::select('select * from estadistica where  CONCAT(MARCA," ",MODELO) like "%'.$keyword.'%" limit 15');
-		$Tiendas=DB::select('select origen from productos where  CONCAT(MARCA," ",MODELO) like "%'.$keyword.'%" group by origen' );
+		$productos=DB::select('select * from productos where  CONCAT(MARCA," ",MODELO) like "%'.$keyword.'%" ');
+		$estadistica=DB::select('select * from estadistica where  CONCAT(MARCA," ",MODELO) like "%'.$keyword.'%"');
+		$Tiendas=DB::select('select origen from productos where  CONCAT(MARCA," ",MODELO)="'.$keyword.'" group by origen' );
 		return array("productos"=>$productos,"estadistica"=>$estadistica,"Tiendas"=>$Tiendas);
 	}
 	function getList(){

@@ -10,7 +10,7 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 		exCat=true;
 		exMod=true;
 		exMar=true;
-		var S="";
+		var S="/zonngo/public";
 		$(document).ready(function(){
 			$(".panel-items-nuevo").hide();
 			$(".panel-items-usado").hide();
@@ -178,6 +178,7 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 					HeightNuevo=0;
 					HeightUsado=0;
 					data["productos"].forEach(function(i){
+
 						$("#body-"+i["Condicion"]).append("<tr class='"+i["Origen"]+"'><td><img src='http://"+window.location.host+S+"/img/"+i["Origen"]+".png' height='30px'></td><td><a target='_blank' href='"+i["Link"]+"''>"+i["Titulo"]+"</a></td><td>"+i["Precio"]+"</td></tr>");
 						if(i["Condicion"]=="nuevo"){
 							if(HeightNuevo<250){
@@ -242,11 +243,9 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 					search_();
 				}
 			});	
-			$("search").on('click', function() {
+			$("#search").on('click', function() {
 				search_();
 			});
-
-
 			$('.checkbox').on('click',  function() {
 				// console.log("HOlaMund");
 				var Tienda=$(this).find('input');
@@ -289,6 +288,10 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 					HeightNuevo=0;
 					HeightUsado=0;
 					data["productos"].orderByNumber("Precio",1);
+					
+					dist=[]
+					cant=[]
+					index=0;
 					data["productos"].forEach(function(i){
 						$("#body-"+i["Condicion"]).append("<tr class='"+i["Origen"]+"'><td><img src='http://"+window.location.host+S+"/img/"+i["Origen"]+".png' height='30px'></td><td><a target='_blank' href='"+i["Link"]+"''>"+i["Titulo"]+"</a></td><td>"+i["Precio"]+"</td></tr>");
 						
@@ -305,6 +308,33 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 							$("#table-nuevo").css({
 								"height": (HeightNuevo+75).toString()+"px"
 							});
+							////inicio indexado
+							
+							val=parseInt(i["Precio"]);
+							re=val%100;
+							Q=parseInt(val/100);
+							
+							if(val>=((Q*100)+75) && val<=((Q+1)*100+25)){
+								index=parseInt((val/100)+1)*100;
+							}else if(val>=((Q*100)+25) && val<=((Q*100)+75)){
+								index=parseInt(val/100)*100+50;
+							}
+							// console.log(Nuevo.indexOf(index));
+							// console.log(index);
+							// if(Nuevo.indexOf(Nuevioindex)>=0){
+
+							// 	Nuevo[index]=Nuevo[index]+1;
+							// }else{
+							// 	Nuevo[index]=1;
+							// }
+							if(dist.indexOf(index)>=0){
+								cant[dist.indexOf(index)]=cant[dist.indexOf(index)]+1;
+							}else{
+								cant.push(1);
+								dist.push(index);
+							}
+							
+							/////fin indexado
 						}
 						if(i["Condicion"]=="usado"){
 							if(HeightUsado<250){
@@ -317,11 +347,15 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 								"height": HeightUsado.toString()+"px"
 							});
 							$("#table-usado").css({
-									"height": (HeightUsado+75).toString()+"px"
+								"height": (HeightUsado+75).toString()+"px"
 							});
 						}
 						
 					});
+					var Nuevo={"dist":dist,"val":cant};
+					console.log(Nuevo);
+					grafico(data["estadistica"][0]["Modelo"],Nuevo,1);
+
 					for (var i=0;i<data["estadistica"].length;i++) {
 						$("#"+data["estadistica"][i]["Condicion"]+"-desc").text(data["estadistica"][i]["Modelo"]);
 						$("#"+data["estadistica"][i]["Condicion"]+"-prom").text("S/."+data["estadistica"][i]["Promedio"]+".00");
@@ -345,6 +379,59 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 							}
 					}
 				});
-			
-			}												
+			}		
+			function grafico(Equipo,Nuevos,Usados){
+				// Nuevos={"dist":[800,900,1000,1100,1200],"val":[10,15,25,23,16]}
+				$(function () {
+				    $('#grafico').highcharts({
+				        chart: {
+				            zoomType: 'xy'
+				        },
+				        title: {
+				            text: 'Distribución de precios del '+Equipo+' en el Mercado'
+				        },
+				        subtitle: {
+				            text: 'Nuevos'
+				        },
+				        xAxis: [{
+				            categories: Nuevos["dist"],
+				            crosshair: true
+				        }],
+				        yAxis: [{ // Primary yAxis
+				            labels: {
+				                format: '{value}',
+				                style: {
+				                    color: Highcharts.getOptions().colors[1]
+				                }
+				            },
+				            title: {
+				                text: 'Cantidades',
+				                style: {
+				                    color: Highcharts.getOptions().colors[1]
+				                }
+				            }
+				        }],
+				        tooltip: {
+				            shared: true
+				        },
+				        legend: {
+				            layout: 'vertical',
+				            align: 'left',
+				            x: 120,
+				            verticalAlign: 'top',
+				            y: 100,
+				            floating: true,
+				            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+				        },
+				        series: [{
+				            name: 'Cantidades por intervalo de precio',
+				            type: 'column',
+				            data: Nuevos["val"],
+				            tooltip: {
+				                valueSuffix: ''
+				            }
+				        }]
+				    });
+				});
+			}										
 		})

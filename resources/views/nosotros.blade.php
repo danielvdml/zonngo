@@ -6,30 +6,30 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 	<title>Zonngo</title>
-	<link rel="icon" href="../img/zonngo_.png"  sizes="16x16">
+	<link rel="icon" href="http://zonngo.com/img/zonngov4.png"  sizes="16x16">
 	<meta content=" | " name="description" />
 	<meta content="width=device-width, initial-scale=1.0" name="viewport" />
 	<link href="http://gmpg.org/xfn/11" rel="profile" />
-	<link href="wp-content/uploads/2015/03/zo.png" rel="icon" type="image/x-icon" />
+	<link href="../wp-content/uploads/2015/03/zo.png" rel="icon" type="image/x-icon" />
 	<link href="xmlrpc.php" rel="pingback" />
 	<link href="feed/index.html" rel="alternate" title="Tasadores informáticos colaboradores con la justicia" type="application/rss+xml" />
 	<link href="feed/atom/index.html" rel="alternate" title="Tasadores informáticos colaboradores con la justicia" type="application/atom+xml" />
-	<link href="wp-content/themes/theme52146/bootstrap/css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/themes/theme52146/bootstrap/css/responsive.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/themes/CherryFramework/css/camera.css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/themes/theme52146/style.css" media="all" rel="stylesheet" type="text/css" /><!-- All in One SEO Pack 2.2.7.2 by Michael Torbert of Semper Fi Web Designob_start_detected [-1,-1] -->
+	<link href="../wp-content/themes/theme52146/bootstrap/css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/themes/theme52146/bootstrap/css/responsive.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/themes/CherryFramework/css/camera.css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/themes/theme52146/style.css" media="all" rel="stylesheet" type="text/css" /><!-- All in One SEO Pack 2.2.7.2 by Michael Torbert of Semper Fi Web Designob_start_detected [-1,-1] -->
 	<meta content="Tasación y valoración de activos y proyectos informáticos. Cumplimos la norma contable NIC38" itemprop="description" name="description" />
 	<meta content="Tasación y valoración de activos y proyectos informáticos, Tasación informática, Tasación de software, Valoración de negocios informáticos, Cumplimos la norma contable NIC38" itemprop="keywords" name="keywords" />
 	<link href="index.html" rel="canonical" />
 	<meta content="Tasación y valoración de activos y proyectos informáticos." property="og:title" />
 	<meta content="blog" property="og:type" />
 	<meta content="index.html" property="og:url" />
-	<meta content="wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" property="og:image" />
+	<meta content="../wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" property="og:image" />
 	<meta content="Tasadores informáticos colaboradores con la justicia" property="og:site_name" />
 	<meta content="Plataforma comparativa de precios más grande del mercado." property="og:description" />
 	<meta content="summary" name="twitter:card" />
 	<meta content="Buscas los precios del mercado ahora es más fácil" name="twitter:description" />
-	<meta content="wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" itemprop="image" /><script>
+	<meta content="../wp-content/plugins/all-in-one-seo-pack/images/default-user-image.png" itemprop="image" /><script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -58,20 +58,20 @@ img.emoji {
 	padding: 0 !important;
 }
 	</style>
-	<link href="wp-content/plugins/cherry-plugin/lib/js/FlexSlider/flexslider3601.css?ver=2.2.0" id="flexslider-css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/plugins/cherry-plugin/lib/js/owl-carousel/owl.carousel8a28.css?ver=1.24" id="owl-carousel-css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/plugins/cherry-plugin/lib/js/owl-carousel/owl.theme8a28.css?ver=1.24" id="owl-theme-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/plugins/cherry-plugin/lib/js/FlexSlider/flexslider3601.css?ver=2.2.0" id="flexslider-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/plugins/cherry-plugin/lib/js/owl-carousel/owl.carousel8a28.css?ver=1.24" id="owl-carousel-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/plugins/cherry-plugin/lib/js/owl-carousel/owl.theme8a28.css?ver=1.24" id="owl-theme-css" media="all" rel="stylesheet" type="text/css" />
 	
-	<link href="wp-content/plugins/cherry-plugin/includes/css/cherry-plugin1efe.css?ver=1.2.8" id="cherry-plugin-css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/plugins/cherry-media-parallax/css/cherry-media-parallax-styles5152.css?ver=1.0" id="cherry-media-parallax-styles-css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/plugins/contact-form-7/includes/css/styles3a05.css?ver=4.2.2" id="contact-form-7-css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/themes/theme52146/css/jquery.mCustomScrollbar.min5b31.css?ver=4.3.1" id="mCustomScrollbar-css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/themes/theme52146/css/btn5b31.css?ver=4.3.1" id="btn-css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/themes/theme52146/css/animate5b31.css?ver=4.3.1" id="animate-css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/themes/theme52146/main-style.css" id="theme52146-css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/themes/CherryFramework/css/magnific-popup81c3.css?ver=0.9.3" id="magnific-popup-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/plugins/cherry-plugin/includes/css/cherry-plugin1efe.css?ver=1.2.8" id="cherry-plugin-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/plugins/cherry-media-parallax/css/cherry-media-parallax-styles5152.css?ver=1.0" id="cherry-media-parallax-styles-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/plugins/contact-form-7/includes/css/styles3a05.css?ver=4.2.2" id="contact-form-7-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/themes/theme52146/css/jquery.mCustomScrollbar.min5b31.css?ver=4.3.1" id="mCustomScrollbar-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/themes/theme52146/css/btn5b31.css?ver=4.3.1" id="btn-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/themes/theme52146/css/animate5b31.css?ver=4.3.1" id="animate-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/themes/theme52146/main-style.css" id="theme52146-css" media="all" rel="stylesheet" type="text/css" />
+	<link href="../wp-content/themes/CherryFramework/css/magnific-popup81c3.css?ver=0.9.3" id="magnific-popup-css" media="all" rel="stylesheet" type="text/css" />
 	<link href="http://fonts.googleapis.com/css?family=Raleway:100&amp;subset=latin" id="options_typography_Raleway:100-css" media="all" rel="stylesheet" type="text/css" />
-	<link href="wp-content/plugins/jetpack/css/jetpackf3df.css?ver=3.7.2" id="jetpack_css-css" media="all" rel="stylesheet" type="text/css" /><script type='text/javascript' src='wp-content/themes/CherryFramework/js/jquery-1.7.2.minba3a.js?ver=1.7.2'></script><script type='text/javascript' src='wp-content/plugins/cherry-plugin/lib/js/jquery.easing.1.34e44.js?ver=1.3'></script><script type='text/javascript' src='wp-content/plugins/cherry-plugin/lib/js/elasti-carousel/jquery.elastislide1efe.js?ver=1.2.8'></script><script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;ver=4.3.1'></script><script type='text/javascript' src='wp-content/themes/theme52146/js/my_script5152.js?ver=1.0'></script><script type='text/javascript' src='wp-content/themes/theme52146/js/btn5152.js?ver=1.0'></script><script type='text/javascript' src='wp-content/themes/theme52146/js/jquery.counterup.min5152.js?ver=1.0'></script><script type='text/javascript' src='wp-content/themes/CherryFramework/js/jquery-migrate-1.2.1.min1576.js?ver=1.2.1'></script><script type='text/javascript' src='wp-includes/js/swfobjecteb77.js?ver=2.2-20120417'></script><script type='text/javascript' src='wp-content/themes/CherryFramework/js/modernizr1717.js?ver=2.0.6'></script><script type='text/javascript' src='wp-content/themes/CherryFramework/js/jflickrfeed5152.js?ver=1.0'></script><script type='text/javascript' src='wp-content/themes/CherryFramework/js/custom5152.js?ver=1.0'></script><script type='text/javascript' src='wp-content/themes/CherryFramework/bootstrap/js/bootstrap.mina1ec.js?ver=2.3.0'></script>
+	<link href="../wp-content/plugins/jetpack/css/jetpackf3df.css?ver=3.7.2" id="jetpack_css-css" media="all" rel="stylesheet" type="text/css" /><script type='text/javascript' src='../wp-content/themes/CherryFramework/js/jquery-1.7.2.minba3a.js?ver=1.7.2'></script><script type='text/javascript' src='../wp-content/plugins/cherry-plugin/lib/js/jquery.easing.1.34e44.js?ver=1.3'></script><script type='text/javascript' src='../wp-content/plugins/cherry-plugin/lib/js/elasti-carousel/jquery.elastislide1efe.js?ver=1.2.8'></script><script type='text/javascript' src='http://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false&amp;ver=4.3.1'></script><script type='text/javascript' src='../wp-content/themes/theme52146/js/my_script5152.js?ver=1.0'></script><script type='text/javascript' src='../wp-content/themes/theme52146/js/btn5152.js?ver=1.0'></script><script type='text/javascript' src='../wp-content/themes/theme52146/js/jquery.counterup.min5152.js?ver=1.0'></script><script type='text/javascript' src='../wp-content/themes/CherryFramework/js/jquery-migrate-1.2.1.min1576.js?ver=1.2.1'></script><script type='text/javascript' src='wp-includes/js/swfobjecteb77.js?ver=2.2-20120417'></script><script type='text/javascript' src='../wp-content/themes/CherryFramework/js/modernizr1717.js?ver=2.0.6'></script><script type='text/javascript' src='../wp-content/themes/CherryFramework/js/jflickrfeed5152.js?ver=1.0'></script><script type='text/javascript' src='../wp-content/themes/CherryFramework/js/custom5152.js?ver=1.0'></script><script type='text/javascript' src='../wp-content/themes/CherryFramework/bootstrap/js/bootstrap.mina1ec.js?ver=2.3.0'></script>
 	<link href="xmlrpc0db0.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml" />
 	<link href="wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml" />
 	<meta content="WordPress 4.3.1" name="generator" />
@@ -79,9 +79,9 @@ img.emoji {
 	<style type="text/css">img#wpstats{display:none}
 	</style>
 	<script>
- var system_folder = 'wp-content/themes/CherryFramework/admin/data_management/index.html',
-	 CHILD_URL ='wp-content/themes/theme52146.html',
-	 PARENT_URL = 'wp-content/themes/CherryFramework.html', 
+ var system_folder = '../wp-content/themes/CherryFramework/admin/data_management/index.html',
+	 CHILD_URL ='../wp-content/themes/theme52146.html',
+	 PARENT_URL = '../wp-content/themes/CherryFramework.html', 
 	 CURRENT_THEME = 'theme52146'</script>
 	<style type="text/css">body { background-color:#000000 }
 .header { background-color:#000000 }
@@ -101,7 +101,7 @@ body { font-weight: normal;}
 			<img src="http://beatie6.frontcube.com/images/ie6.jpg" alt="Upgrade IE 6" width="640" height="344" border="0" usemap="#Map" longdesc="http://die6.frontcube.com" /><map name="Map" id="Map"><area shape="rect" coords="496,201,604,329" href="http://www.microsoft.com/windows/internet-explorer/default.aspx" target="_blank" alt="Download Interent Explorer" /><area shape="rect" coords="380,201,488,329" href="http://www.apple.com/safari/download/" target="_blank" alt="Download Apple Safari" /><area shape="rect" coords="268,202,376,330" href="http://www.opera.com/download/" target="_blank" alt="Download Opera" /><area shape="rect" coords="155,202,263,330" href="http://www.mozilla.com/" target="_blank" alt="Download Firefox" /><area shape="rect" coords="35,201,143,329" href="http://www.google.com/chrome" target="_blank" alt="Download Google Chrome" />
 			</map>
 		</div>
-	<![endif]--><!--[if gte IE 9]><!--><script src="wp-content/themes/CherryFramework/js/jquery.mobile.customized.min.js" type="text/javascript"></script><script type="text/javascript">
+	<![endif]--><!--[if gte IE 9]><!--><script src="../wp-content/themes/CherryFramework/js/jquery.mobile.customized.min.js" type="text/javascript"></script><script type="text/javascript">
 			jQuery(function(){
 				jQuery('.sf-menu').mobileMenu({defaultText: "Navegación"});
 			});
@@ -145,6 +145,17 @@ body { font-weight: normal;}
 			}
 		})
 	</script>
+	<style>
+		.navbar-negro {
+				background-color: #232f3e;
+				-ms-background-color: #232f3e;
+				-webkit-background-color: #232f3e;
+				opacity: 0.8;
+				-ms-opacity: 0.8;
+				-webkit-opacity: 0.8;
+				
+			}
+	</style>
 </head>
 <body class="home page page-id-203 page-template page-template-page-home page-template-page-home-php">
 <div class="main-holder" id="motopress-main"><!--Begin #motopress-main-->
@@ -163,33 +174,13 @@ body { font-weight: normal;}
               });
           });
     </script>
-
-<section class="fixed_parallax_section cherry_fixed_parallax" data-source-height="1097" data-source-url="http://tasacioninformatica.com/wp-content/uploads/2015/03/portada2_vilanova.jpg" data-source-width="1920" id="fixedparallax_561aba3e5db63">
-<div class="container parallax_content">
-<div class="row ">
-<div class="span12 ">
-<h1 style="color: white;">&iquest;Problemas al comprar un producto? &iquest;No sabes el precio de venta de tu bien? Nosotros te ayudamos.</h1>
-
-<h5 style="color: white;">Zonngo es una plataforma de precios, puedes ver los precios en forma referencial de los productos más buscados en el mercado: aparatos electrónicos, fármacos,etc.</h5>
-
-<p></p>
-
-<p style="font-size: 16px; font-weight: 400; color: #fff;">Zonngo <strong> esta conformado por un equipo de jovenes emprendedores </strong>, que se encuentran <strong> trabajando d&iacute;a a d&iacute;a </strong> para darte las mejores precios. Nuestros datos son comparados en l&iacute;nea con diferentes web, <strong> destacamos en tasar productos electr&oacute;nicos, bienes y ra&iacute;ces. </strong>.</p>
-
-<a class="btn btn-default btn-normal btn-inline " href={{route("index")}} target="_self" title="Calcula tus precios">CALCULADOR DE PRECIO </a>
-
-<!-- <a class="btn btn-default btn-normal btn-inline " href="../comercial/index.html" target="_self" title="Solicita tu prueba gratuita">ZONNGO PARA EMPRESAS </a><!-- .btn --> -->
-</div>
-</div>
-<!-- .row (end) --></div>
-</section>
 </div>
 </div>
 </div>
 </div>
 </div>
 
-<header class="motopress-wrapper header">
+<header class="navbar-negro motopress-wrapper header">
 <div class="container">
 <div class="row">
 <div class="span12" data-motopress-id="561aba3e912eb" data-motopress-wrapper-file="wrapper/wrapper-header.php" data-motopress-wrapper-type="header">
@@ -198,15 +189,19 @@ body { font-weight: normal;}
 <div class="nav-wrap">
 <div class="row">
 <div class="span3" data-motopress-static-file="static/static-logo.html" data-motopress-type="static"><!-- BEGIN LOGO -->
-<div class="logo pull-left"><a class="logo_h logo_h__img" href="index.html"><img alt="Tasadores informáticos colaboradores con la justicia" src="wp-content/uploads/2015/03/logo_tasacion_head.png" title="" /></a></div>
+<div class="logo pull-left">
+	<a class="logo_h logo_h__img" href="index.html">
+		{!!HTML::image("img/z2.png","alt",["class"=>"img-responsive","height"=>"120px"])!!}
+	</a>
+</div>
 <!-- END LOGO --></div>
 
 <div class="span9" data-motopress-static-file="static/static-nav.html" data-motopress-type="static"><!-- BEGIN MAIN NAVIGATION -->
 <nav class="nav nav__primary clearfix">
 <ul class="sf-menu" id="topnav">
 	<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-2640"><a href={{route("Nosotros.index")}}>&iquest;Que necesitas?</a></li>
-	<li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-2632"><a href={{route("contacto.index")}}>Cont&aacute;ctanos</a></li>
-	<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-3494"><a href={{route("index")}}>Calculador de precios</a></li>
+	<!-- <li class="menu-item menu-item-type-post_type menu-item-object-page" id="menu-item-2632"><a href={{route("contacto.index")}}>Cont&aacute;ctanos</a></li> -->
+	<li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-3494"><a href={{route("index")}}>MVP</a></li>
 	<!-- <li class="menu-item menu-item-type-custom menu-item-object-custom" id="menu-item-3490"><a href="comercial/index.html">Para empresas</a></li> -->
 </ul>
 </nav>
@@ -276,7 +271,7 @@ NOSOTROS TE APOYAMOS! GRACIAS A NUESTROS MODELOS DESARROLLADOS TE DAMOS DIFERENT
 
 <div class="span3 tofade">
 <div class="service-box ">
-<figure class="icon"><img alt="" src="wp-content/uploads/2015/03/tl.jpg" /></figure>
+<figure class="icon"><img alt="" src="../wp-content/uploads/2015/03/tl.jpg" /></figure>
 
 <div class="service-box_body">
 <h2 class="title">Calculador de precios</h2>
@@ -288,7 +283,7 @@ NOSOTROS TE APOYAMOS! GRACIAS A NUESTROS MODELOS DESARROLLADOS TE DAMOS DIFERENT
 
 <div class="span3 tofade">
 <div class="service-box ">
-<figure class="icon"><img alt="" src="wp-content/uploads/2015/03/startup.png" /></figure>
+<figure class="icon"><img alt="" src="../wp-content/uploads/2015/03/startup.png" /></figure>
 
 <div class="service-box_body">
 <h2 class="title">Redireccionamiento</h2>
@@ -300,7 +295,7 @@ NOSOTROS TE APOYAMOS! GRACIAS A NUESTROS MODELOS DESARROLLADOS TE DAMOS DIFERENT
 
 <div class="span3 tofade">
 <div class="service-box ">
-<figure class="icon"><img alt="" src="wp-content/uploads/2015/03/consorcio.png" /></figure>
+<figure class="icon"><img alt="" src="../wp-content/uploads/2015/03/consorcio.png" /></figure>
 
 <div class="service-box_body">
 <h2 class="title">Servicio de An&aacute;litica</h2>
@@ -312,7 +307,7 @@ NOSOTROS TE APOYAMOS! GRACIAS A NUESTROS MODELOS DESARROLLADOS TE DAMOS DIFERENT
 
 <div class="span3 tofade">
 <div class="service-box ">
-<figure class="icon"><img alt="" src="wp-content/uploads/2015/03/legal.png" /></figure>
+<figure class="icon"><img alt="" src="../wp-content/uploads/2015/03/legal.png" /></figure>
 
 <div class="service-box_body">
 <h2 class="title">Equidad - Justicia</h2>
@@ -387,7 +382,7 @@ PRECIOS COMPETITIVOS EN EL MERCADO - PRECIOS AJUSTADO A TUS NECESIDADES - CUBRIR
 <table>
 	<tbody>
 		<tr>
-			<td><img alt="" height="200" src="wp-content/uploads/2015/03/andes.jpg" width="200" /></td>
+			<td><img alt="" height="200" src="../wp-content/uploads/2015/03/andes.jpg" width="200" /></td>
 		</tr>
 	</tbody>
 </table>
@@ -430,47 +425,47 @@ PRECIOS COMPETITIVOS EN EL MERCADO - PRECIOS AJUSTADO A TUS NECESIDADES - CUBRIR
 
 <script type='text/javascript' src='wp-includes/js/comment-reply.min5b31.js'>
 	
-</script><script type='text/javascript' src='wp-content/plugins/cherry-plugin/lib/js/FlexSlider/jquery.flexslider-min605a.js?ver=2.2.2'></script><script type='text/javascript'>
+</script><script type='text/javascript' src='../wp-content/plugins/cherry-plugin/lib/js/FlexSlider/jquery.flexslider-min605a.js?ver=2.2.2'></script><script type='text/javascript'>
 /* <![CDATA[ */
 var items_custom = [[0,1],[480,2],[768,3],[980,4],[1170,5]];
 /* ]]> */
-</script><script type='text/javascript' src='wp-content/plugins/cherry-plugin/includes/js/cherry-plugin1efe.js?ver=1.2.8'></script><script type='text/javascript' src='wp-content/plugins/cherry-media-parallax/js/smoothing-scroll5152.js?ver=1.0'></script><script type='text/javascript' src='wp-content/plugins/cherry-media-parallax/js/cherry-media-parallax5152.js?ver=1.0'></script><script type='text/javascript' src='wp-content/plugins/cherry-media-parallax/js/cherry-fixed-parallax5152.js?ver=1.0'></script><script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/jquery.form.mind03d.js?ver=3.51.0-2014.06.20'></script><script type='text/javascript'>
+</script><script type='text/javascript' src='../wp-content/plugins/cherry-plugin/includes/js/cherry-plugin1efe.js?ver=1.2.8'></script><script type='text/javascript' src='../wp-content/plugins/cherry-media-parallax/js/smoothing-scroll5152.js?ver=1.0'></script><script type='text/javascript' src='../wp-content/plugins/cherry-media-parallax/js/cherry-media-parallax5152.js?ver=1.0'></script><script type='text/javascript' src='../wp-content/plugins/cherry-media-parallax/js/cherry-fixed-parallax5152.js?ver=1.0'></script><script type='text/javascript' src='../wp-content/plugins/contact-form-7/includes/js/jquery.form.mind03d.js?ver=3.51.0-2014.06.20'></script><script type='text/javascript'>
 /* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"http:\/\/tasacioninformatica.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Enviando..."};
+var _wpcf7 = {"loaderUrl":"http:\/\/tasacioninformatica.com\/../wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Enviando..."};
 /* ]]> */
 </script>
-<!-- <script type='text/javascript' src='wp-content/plugins/contact-form-7/includes/js/scripts3a05.js'></script>
-<script type='text/javascript' src='../s0.wp.com/wp-content/js/devicepx-jetpack4dec.js'></script>
+<!-- <script type='text/javascript' src='../wp-content/plugins/contact-form-7/includes/js/scripts3a05.js'></script>
+<script type='text/javascript' src='../s0.wp.com/../wp-content/js/devicepx-jetpack4dec.js'></script>
 <script type='text/javascript' src='../s.gravatar.com/js/gprofilesc2e7.js'></script>
  -->
 <script type='text/javascript'>
 /* <![CDATA[ */
 var WPGroHo = {"my_hash":""};
 /* ]]> */
-</script><script type='text/javascript' src='wp-content/plugins/jetpack/modules/wpgroho5b31.js?ver=4.3.1'></script>
-<script type='text/javascript' src='wp-content/themes/theme52146/js/jquery.mousewheel-3.0.45152.js?ver=1.0'></script>
-<script type='text/javascript' src='wp-content/themes/theme52146/js/scrollShowTime5152.js?ver=1.0'></script>
-<script type='text/javascript' src='wp-content/themes/theme52146/js/themeScript5152.js?ver=1.0'></script>
-<script type='text/javascript' src='wp-content/themes/theme52146/js/waypoints.min5152.js?ver=1.0'></script>
-<script type='text/javascript' src='wp-content/themes/theme52146/js/jquery.mCustomScrollbar.min5152.js?ver=1.0'>
+</script><script type='text/javascript' src='../wp-content/plugins/jetpack/modules/wpgroho5b31.js?ver=4.3.1'></script>
+<script type='text/javascript' src='../wp-content/themes/theme52146/js/jquery.mousewheel-3.0.45152.js?ver=1.0'></script>
+<script type='text/javascript' src='../wp-content/themes/theme52146/js/scrollShowTime5152.js?ver=1.0'></script>
+<script type='text/javascript' src='../wp-content/themes/theme52146/js/themeScript5152.js?ver=1.0'></script>
+<script type='text/javascript' src='../wp-content/themes/theme52146/js/waypoints.min5152.js?ver=1.0'></script>
+<script type='text/javascript' src='../wp-content/themes/theme52146/js/jquery.mCustomScrollbar.min5152.js?ver=1.0'>
 	
 </script>
-<script type='text/javascript' src='wp-content/themes/CherryFramework/js/superfishe225.js?ver=1.5.3'></script>
-<script type='text/javascript' src='wp-content/themes/CherryFramework/js/jquery.mobilemenu5152.js?ver=1.0'></script>
-<script type='text/javascript' src='wp-content/themes/CherryFramework/js/jquery.magnific-popup.min81c3.js?ver=0.9.3'>
+<script type='text/javascript' src='../wp-content/themes/CherryFramework/js/superfishe225.js?ver=1.5.3'></script>
+<script type='text/javascript' src='../wp-content/themes/CherryFramework/js/jquery.mobilemenu5152.js?ver=1.0'></script>
+<script type='text/javascript' src='../wp-content/themes/CherryFramework/js/jquery.magnific-popup.min81c3.js?ver=0.9.3'>
 	
 </script>
-<script type='text/javascript' src='wp-content/themes/CherryFramework/js/jplayer.playlist.mina1ec.js?ver=2.3.0'></script>
-<script type='text/javascript' src='wp-content/themes/CherryFramework/js/jquery.jplayer.mind315.js?ver=2.6.0'></script>
-<script type='text/javascript' src='wp-content/themes/CherryFramework/js/tmstickup8a54.js?ver=1.0.0'></script>
-<script type='text/javascript' src='wp-content/themes/CherryFramework/js/device.min8a54.js?ver=1.0.0'></script>
-<script type='text/javascript' src='wp-content/themes/CherryFramework/js/jquery.zaccordion.min3c94.js?ver=2.1.0'></script>
-<script type='text/javascript' src='wp-content/themes/CherryFramework/js/camera.minc412.js?ver=1.3.4'>
+<script type='text/javascript' src='../wp-content/themes/CherryFramework/js/jplayer.playlist.mina1ec.js?ver=2.3.0'></script>
+<script type='text/javascript' src='../wp-content/themes/CherryFramework/js/jquery.jplayer.mind315.js?ver=2.6.0'></script>
+<script type='text/javascript' src='../wp-content/themes/CherryFramework/js/tmstickup8a54.js?ver=1.0.0'></script>
+<script type='text/javascript' src='../wp-content/themes/CherryFramework/js/device.min8a54.js?ver=1.0.0'></script>
+<script type='text/javascript' src='../wp-content/themes/CherryFramework/js/jquery.zaccordion.min3c94.js?ver=2.1.0'></script>
+<script type='text/javascript' src='../wp-content/themes/CherryFramework/js/camera.minc412.js?ver=1.3.4'>
 	
 </script>
-<script type='text/javascript' src='wp-content/themes/CherryFramework/js/jquery.debouncedresize5152.js?ver=1.0'></script>
-<script type='text/javascript' src='wp-content/themes/CherryFramework/js/jquery.ba-resize.min4963.js?ver=1.1'></script>
-<script type='text/javascript' src='wp-content/themes/CherryFramework/js/jquery.isotopedc81.js?ver=1.5.25'></script>
+<script type='text/javascript' src='../wp-content/themes/CherryFramework/js/jquery.debouncedresize5152.js?ver=1.0'></script>
+<script type='text/javascript' src='../wp-content/themes/CherryFramework/js/jquery.ba-resize.min4963.js?ver=1.1'></script>
+<script type='text/javascript' src='../wp-content/themes/CherryFramework/js/jquery.isotopedc81.js?ver=1.5.25'></script>
 <!-- <script type='text/javascript' src='../stats.wp.com/e-201541.js' async defer></script> -->
 <script type='text/javascript'>
 	_stq = window._stq || [];
