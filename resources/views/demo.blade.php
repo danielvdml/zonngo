@@ -34,8 +34,7 @@
 				-ms-background-color: white;
 				-webkit-background-color: white;
 			}
-			.filtro{
-			}
+			
 			
 		</style>
 		{!!HTML::style("css/Productos.css")!!}
@@ -44,7 +43,8 @@
 		
 	</head>
 	<body>
-		
+		<input type="hidden"  id="urlIndex" class="form-control" value={{route("index")}} >
+
 		<nav class="navbar navbar-negro  " role="navigation" style="position:fixed;width:100%;z-index:100" >
 			<div class="navbar-header">
 				<div class="container-fluid">
@@ -239,7 +239,7 @@
 						</table>
 					</div>
 				</div>
-				<div class="panel-items-nuevo col-xs-12 col-sm-offset-3 col-sm-8 " style="padding:25px">
+				<div class=" col-xs-12 col-sm-offset-3 col-sm-8 " style="padding:25px">
 					<div id="grafico"></div>
 				</div>
 				
@@ -271,16 +271,15 @@
 				position: absolute;
 			}
 	</style>
-	<!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> -->
 	
 	
 	
-	<!-- {!!HTML::style("js/jquery-ui.min.css")!!} -->
+	{!!HTML::style("js/jquery-ui.min.css")!!}
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 	
-	<!-- 	{!!HTML::script("js/jquery.min.js")!!}
+	<!-- {!!HTML::script("js/jquery.min.js")!!}
 	{!!HTML::script("js/jquery-ui.min.js")!!} -->
 	{!!HTML::script("js/bjqs.min.js")!!}
 	{!!HTML::script("js/bootstrap.min.js")!!}

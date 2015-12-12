@@ -10,12 +10,10 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 		exCat=true;
 		exMod=true;
 		exMar=true;
-		var S="/zonngo/public";
+		var S="";
 		$(document).ready(function(){
-			$(".panel-items-nuevo").hide();
-			$(".panel-items-usado").hide();
-			$(".side-filtros").hide();
-			url=window.location;
+			
+			url=$("#urlIndex").val();
 			Data=[];
 			items=[];
 			categoria="";
@@ -23,9 +21,13 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 			$.get(url+'/getList_', function(data) {
 				Data=data;
 				
+				// for(i  in data["Modelos"]){
+				// 	items.push(i["Marca"]+" "+i["Modelo"]);
+				// }
 				data["Modelos"].forEach(function(i){
 					items.push(i["Marca"]+" "+i["Modelo"]);
 				});	
+
 				$("#categoria").append('<option value="--Categoria--">--Categoria--</option>');			
 				data["Categorias"].forEach(function(i){
 					c=i["Categoria"];
@@ -51,9 +53,6 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 				// });
 			});
 			$("#marca").on("change",function(){
-				$(".panel-items-nuevo").show();
-				$(".panel-items-usado").show();
-				$(".side-filtros").show();
 				$(".Principal").hide();
 				$("#modelos option").remove();
 				marca=$("#marca").val();
@@ -90,6 +89,13 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 					usado=0;
 					HeightNuevo=0;
 					HeightUsado=0;
+
+					dist_nuevo=[];
+					cant_nuevo=[];
+					dist_usado=[];
+					cant_usado=[];
+					index=0;
+
 					data["productos"].forEach(function(i){
 						$("#body-"+i["Condicion"]).append("<tr class='"+i["Origen"]+"'><td><img src='http://"+window.location.host+S+"/img/"+i["Origen"]+".png' height='30px'></td><td><a target='_blank' href='"+i["Link"]+"''>"+i["Titulo"]+"</a></td><td>"+i["Precio"]+"</td></tr>");
 						// $("#body-"+i["Condicion"]).append("<tr><td><img src='http://"+window.location.host+"/zonngo/public/img/"+i["Origen"]+".png' height='30px'></td><td><a target='_blank' href='"+i["Link"]+"''>"+i["Titulo"]+"</a></td><td>"+i["Precio"]+"</td></tr>");
@@ -103,9 +109,30 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 							$("#body-nuevo").css({
 								"height": HeightNuevo.toString()+"px"
 							});
-							$("#table-nuevo").css({
+							$("#body-nuevo").css({
 								"height": (HeightNuevo+100).toString()+"px"
 							});
+
+							////inicio indexado
+							
+							val=parseInt(i["Precio"]);
+							re=val%100;
+							Q=parseInt(val/100);
+							
+							if(val>=((Q*100)+75) && val<=((Q+1)*100+25)){
+								index=parseInt((val/100)+1)*100;
+							}else if(val>=((Q*100)+25) && val<=((Q*100)+75)){
+								index=parseInt(val/100)*100+50;
+							}
+
+							if(dist_nuevo.indexOf(index)>=0){
+								cant_nuevo[dist_nuevo.indexOf(index)]=cant_nuevo[dist_nuevo.indexOf(index)]+1;
+							}else{
+								cant_nuevo.push(1);
+								dist_nuevo.push(index);
+							}
+							
+							/////fin indexado							
 						}
 						if(i["Condicion"]=="usado"){
 							if(HeightUsado<250){
@@ -117,13 +144,38 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 							$("#body-usado").css({
 								"height": HeightUsado.toString()+"px"
 							});
-							$("#table-usado").css({
+							$("#body-usado").css({
 								"height": (HeightUsado+100).toString()+"px"
 							});
+							////inicio indexado
+							
+							val=parseInt(i["Precio"]);
+							re=val%100;
+							Q=parseInt(val/100);
+							
+							if(val>=((Q*100)+75) && val<=((Q+1)*100+25)){
+								index=parseInt((val/100)+1)*100;
+							}else if(val>=((Q*100)+25) && val<=((Q*100)+75)){
+								index=parseInt(val/100)*100+50;
+							}
+							
+							if(dist_usado.indexOf(index)>=0){
+								cant_usado[dist_usado.indexOf(index)]=cant_usado[dist_usado.indexOf(index)]+1;
+							}else{
+								cant_usado.push(1);
+								dist_usado.push(index);
+							}
+							
+							/////fin indexado
 						}
 						
 					});
 					
+					var Nuevo={"dist":dist_nuevo,"val":cant_nuevo};
+					var Usado={"dist":dist_usado,"val":cant_usado};
+					console.log(Nuevo);
+					console.log(Usado);
+					grafico(data["estadistica"][0]["Modelo"],Nuevo,Usado);
 					for (var i=0;i<data["estadistica"].length;i++) {
 						$("#"+data["estadistica"][i]["Condicion"]+"-desc").text(data["estadistica"][i]["Modelo"]);
 						$("#"+data["estadistica"][i]["Condicion"]+"-prom").text("S/."+data["estadistica"][i]["Promedio"]+".00");
@@ -149,9 +201,6 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 				});
 			});
 			$("#modelos").on("change",function(){
-				$(".panel-items-nuevo").show();
-				$(".panel-items-usado").show();
-				$(".side-filtros").show();
 				$(".Principal").hide();
 				modelo=$("#modelos").val().replace(/-/g," ");
 				$.get(url+'/getListItems/'+categoria+"/"+marca+"/"+modelo, function(data) {
@@ -177,6 +226,12 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 					usado=0;
 					HeightNuevo=0;
 					HeightUsado=0;
+
+					dist_nuevo=[];
+					cant_nuevo=[];
+					dist_usado=[];
+					cant_usado=[];
+					index=0;
 					data["productos"].forEach(function(i){
 
 						$("#body-"+i["Condicion"]).append("<tr class='"+i["Origen"]+"'><td><img src='http://"+window.location.host+S+"/img/"+i["Origen"]+".png' height='30px'></td><td><a target='_blank' href='"+i["Link"]+"''>"+i["Titulo"]+"</a></td><td>"+i["Precio"]+"</td></tr>");
@@ -190,9 +245,29 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 							$("#body-nuevo").css({
 								"height": HeightNuevo.toString()+"px"
 							});
-							$("#table-nuevo").css({
+							$("#body-nuevo").css({
 								"height": (HeightNuevo+75).toString()+"px"
 							});
+							////inicio indexado
+							
+							val=parseInt(i["Precio"]);
+							re=val%100;
+							Q=parseInt(val/100);
+							
+							if(val>=((Q*100)+75) && val<=((Q+1)*100+25)){
+								index=parseInt((val/100)+1)*100;
+							}else if(val>=((Q*100)+25) && val<=((Q*100)+75)){
+								index=parseInt(val/100)*100+50;
+							}
+
+							if(dist_nuevo.indexOf(index)>=0){
+								cant_nuevo[dist_nuevo.indexOf(index)]=cant_nuevo[dist_nuevo.indexOf(index)]+1;
+							}else{
+								cant_nuevo.push(1);
+								dist_nuevo.push(index);
+							}
+							
+							/////fin indexado
 						}
 						if(i["Condicion"]=="usado"){
 							if(HeightUsado<250){
@@ -204,12 +279,37 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 							$("#body-usado").css({
 								"height": HeightUsado.toString()+"px"
 							});
-							$("#table-usado").css({
+							$("#body-usado").css({
 								"height": (HeightUsado+75).toString()+"px"
 							});
+							////inicio indexado
+							
+							val=parseInt(i["Precio"]);
+							re=val%100;
+							Q=parseInt(val/100);
+							
+							if(val>=((Q*100)+75) && val<=((Q+1)*100+25)){
+								index=parseInt((val/100)+1)*100;
+							}else if(val>=((Q*100)+25) && val<=((Q*100)+75)){
+								index=parseInt(val/100)*100+50;
+							}
+							
+							if(dist_usado.indexOf(index)>=0){
+								cant_usado[dist_usado.indexOf(index)]=cant_usado[dist_usado.indexOf(index)]+1;
+							}else{
+								cant_usado.push(1);
+								dist_usado.push(index);
+							}
+							
+							/////fin indexado
 						}
 						
 					});
+					var Nuevo={"dist":dist_nuevo,"val":cant_nuevo};
+					var Usado={"dist":dist_usado,"val":cant_usado};
+					console.log(Nuevo);
+					console.log(Usado);
+					grafico(data["estadistica"][0]["Modelo"],Nuevo,Usado);
 					
 					for (var i=0;i<data["estadistica"].length;i++) {
 						$("#"+data["estadistica"][i]["Condicion"]+"-desc").text(data["estadistica"][i]["Modelo"]);
@@ -238,8 +338,11 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 			$("#tags").autocomplete({
 				source:items
 			});
-			$("#tags").on("keyup", function(){
+			$("#tags").on("keyup", function(event){
 				if(event.which==13){
+					$("#panel-items").css({
+						"display": 'block'
+					});
 					search_();
 				}
 			});	
@@ -264,9 +367,6 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 
 
 			function search_(){
-				$(".panel-items-nuevo").show();
-				$(".panel-items-usado").show();
-				$(".side-filtros").show();
 				$(".principal").hide();
 				$keyword=$("#tags").val();
 				$('#categoria').val("--Categoria--");
@@ -289,8 +389,10 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 					HeightUsado=0;
 					data["productos"].orderByNumber("Precio",1);
 					
-					dist=[]
-					cant=[]
+					dist_nuevo=[];
+					cant_nuevo=[];
+					dist_usado=[];
+					cant_usado=[];
 					index=0;
 					data["productos"].forEach(function(i){
 						$("#body-"+i["Condicion"]).append("<tr class='"+i["Origen"]+"'><td><img src='http://"+window.location.host+S+"/img/"+i["Origen"]+".png' height='30px'></td><td><a target='_blank' href='"+i["Link"]+"''>"+i["Titulo"]+"</a></td><td>"+i["Precio"]+"</td></tr>");
@@ -305,6 +407,9 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 							$("#body-nuevo").css({
 								"height": HeightNuevo.toString()+"px"
 							});
+							// $("#body-nuevo").css({
+							// 	"height": (HeightNuevo+75).toString()+"px"
+							// });
 							$("#table-nuevo").css({
 								"height": (HeightNuevo+75).toString()+"px"
 							});
@@ -319,19 +424,12 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 							}else if(val>=((Q*100)+25) && val<=((Q*100)+75)){
 								index=parseInt(val/100)*100+50;
 							}
-							// console.log(Nuevo.indexOf(index));
-							// console.log(index);
-							// if(Nuevo.indexOf(Nuevioindex)>=0){
 
-							// 	Nuevo[index]=Nuevo[index]+1;
-							// }else{
-							// 	Nuevo[index]=1;
-							// }
-							if(dist.indexOf(index)>=0){
-								cant[dist.indexOf(index)]=cant[dist.indexOf(index)]+1;
+							if(dist_nuevo.indexOf(index)>=0){
+								cant_nuevo[dist_nuevo.indexOf(index)]=cant_nuevo[dist_nuevo.indexOf(index)]+1;
 							}else{
-								cant.push(1);
-								dist.push(index);
+								cant_nuevo.push(1);
+								dist_nuevo.push(index);
 							}
 							
 							/////fin indexado
@@ -346,15 +444,40 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 							$("#body-usado").css({
 								"height": HeightUsado.toString()+"px"
 							});
+							// $("#body-usado").css({
+							// 	"height": (HeightUsado+75).toString()+"px"
+							// });
 							$("#table-usado").css({
 								"height": (HeightUsado+75).toString()+"px"
 							});
+							////inicio indexado
+							
+							val=parseInt(i["Precio"]);
+							re=val%100;
+							Q=parseInt(val/100);
+							
+							if(val>=((Q*100)+75) && val<=((Q+1)*100+25)){
+								index=parseInt((val/100)+1)*100;
+							}else if(val>=((Q*100)+25) && val<=((Q*100)+75)){
+								index=parseInt(val/100)*100+50;
+							}
+							
+							if(dist_usado.indexOf(index)>=0){
+								cant_usado[dist_usado.indexOf(index)]=cant_usado[dist_usado.indexOf(index)]+1;
+							}else{
+								cant_usado.push(1);
+								dist_usado.push(index);
+							}
+							
+							/////fin indexado
 						}
 						
 					});
-					var Nuevo={"dist":dist,"val":cant};
+					var Nuevo={"dist":dist_nuevo,"val":cant_nuevo};
+					var Usado={"dist":dist_usado,"val":cant_usado};
 					console.log(Nuevo);
-					grafico(data["estadistica"][0]["Modelo"],Nuevo,1);
+					console.log(Usado);
+					grafico(data["estadistica"][0]["Modelo"],Nuevo,Usado);
 
 					for (var i=0;i<data["estadistica"].length;i++) {
 						$("#"+data["estadistica"][i]["Condicion"]+"-desc").text(data["estadistica"][i]["Modelo"]);
@@ -383,12 +506,12 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 			function grafico(Equipo,Nuevos,Usados){
 				// Nuevos={"dist":[800,900,1000,1100,1200],"val":[10,15,25,23,16]}
 				$(function () {
-				    $('#grafico').highcharts({
+				    $('#grafico-nuevo').highcharts({
 				        chart: {
 				            zoomType: 'xy'
 				        },
 				        title: {
-				            text: 'Distribución de precios del '+Equipo+' en el Mercado'
+				            text: 'Distribución de precios del '+Equipo+' Nuevos en el Mercado'
 				        },
 				        subtitle: {
 				            text: 'Nuevos'
@@ -417,7 +540,7 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 				        legend: {
 				            layout: 'vertical',
 				            align: 'left',
-				            x: 120,
+				            x: 0,
 				            verticalAlign: 'top',
 				            y: 100,
 				            floating: true,
@@ -426,7 +549,58 @@ Array.prototype.orderByNumber=function(property,sortOrder){
 				        series: [{
 				            name: 'Cantidades por intervalo de precio',
 				            type: 'column',
+				            color:"#FF7500",
 				            data: Nuevos["val"],
+				            tooltip: {
+				                valueSuffix: ''
+				            }
+				        }]
+				    });
+					$('#grafico-usado').highcharts({
+				        chart: {
+				            zoomType: 'xy'
+				        },
+				        title: {
+				            text: 'Distribución de precios del '+Equipo+' Usados en el Mercado'
+				        },
+				        subtitle: {
+				            text: 'Usados'
+				        },
+				        xAxis: [{
+				            categories: Usados["dist"],
+				            crosshair: true
+				        }],
+				        yAxis: [{ // Primary yAxis
+				            labels: {
+				                format: '{value}',
+				                style: {
+				                    color: Highcharts.getOptions().colors[1]
+				                }
+				            },
+				            title: {
+				                text: 'Cantidades',
+				                style: {
+				                    color: Highcharts.getOptions().colors[1]
+				                }
+				            },
+				        }],
+				        tooltip: {
+				            shared: true
+				        },
+				        legend: {
+				            layout: 'vertical',
+				            align: 'left',
+				            x: 0,
+				            verticalAlign: 'top',
+				            y: 100,
+				            floating: true,
+				            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+				        },
+				        series: [{
+				            name: 'Cantidades por intervalo de precio',
+				            type: 'column',
+				            color:"#f5af02",
+				            data: Usados["val"],
 				            tooltip: {
 				                valueSuffix: ''
 				            }

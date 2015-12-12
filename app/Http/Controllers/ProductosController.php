@@ -9,7 +9,9 @@ use DB;
 
 class ProductosController extends Controller{
 	function index(){
-		return view("index");
+		$Tiendas=DB::table("productos")->groupBy("Origen")->get(["Origen"]);
+		$Productos=DB::table("productos")->take(20)->get();
+		return view("index",["Tiendas"=>$Tiendas,"Productos"=>$Productos]);
 	}
 	function demo(){
 		$Tiendas=DB::table("productos")->groupBy("Origen")->get(["Origen"]);

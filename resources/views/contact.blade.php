@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Zonngo - Nosotros</title>
+    <title>Zonngo-Contáctanos</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
     <meta name="keywords" content="Template, html, premium, themeforest" />
@@ -14,16 +14,16 @@
     <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
     <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    {!!HTML::style("css/bootstrap.css")!!}
-    {!!HTML::style("css/font-awesome.css")!!}
-    {!!HTML::style("css/styles.css")!!}
-    {!!HTML::style("css/mystyles.css")!!}
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/mystyles.css">
 
 </head>
 
 <body>
-    <div class="navbar-before mobile-hidden">
+    <div class="global-wrapper clearfix" id="global-wrapper">
+        <div class="navbar-before mobile-hidden">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -31,9 +31,9 @@
                     </div>
                     <div class="col-md-6">
                         <ul class="nav navbar-nav navbar-right navbar-right-no-mar">
-                            <li><a href="{{route('nosotros.index')}}">Nosotros</a>
+                            <li><a href="#">Nosotros</a>
                             </li>
-                            <li><a href="{{route('contacto.index')}}">Contáctanos</a>
+                            <li><a href="#">Contáctanos</a>
                             </li>
                             <li><a href="#">Consultas</a>
                             </li>
@@ -53,7 +53,7 @@
                     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Menu Principal</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index.html">
-                        {!!HTML::image("img/logo12.png","Image Alternative text",["title"=>"Image Title"])!!}
+                        <img src="img/logo12.png" alt="Image Alternative text" title="Image Title" />
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -257,90 +257,104 @@
 
         <div class="container">
             <header class="page-header">
-                <h1 class="page-title">Nosotros</h1>
+                <h1 class="page-title">Contáctanos</h1>
             </header>
             <div class="row">
                 <div class="col-md-9">
-                    <p class="lead">Zonngo es una StartUp Calculadora de precios, te proporcionamos los precios</p>
+                    <p class="lead">Podemos comunicarnos desde cualquier parte de latinoamerica o del mundo</p>
                 </div>
             </div>
             <div class="gap gap-small"></div>
-            <div class="row row-col-gap">
-                <div class="col-md-8">
-                    {!!HTML::image("img/banner.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
-                    
+            <div class="row" data-gutter="60">
+                <div class="col-md-5">
+                    <h3 class="widget-title">Déjanos un mensaje</h3>
+                    <p class="text-muted">Escríbenos y te responderemos lo más pronto posible</p>
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input class="form-control" type="text" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Correo</label>
+                                    <input class="form-control" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Mensaje</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+                        <input class="btn btn-primary" type="submit" value="Send a Message" />
+                    </form>
                 </div>
-                <div class="col-md-4">
-                    <h3 class="widget-title">Nuestra historia</h3>
-                    <p>Zonngo nace como una Plataforma de E-Commerce inteligente del rubro C2C, con el cual al pasar de los meses se fueron desarrollando funcionalidades que hacen únicas a Zonngo</p>
-                    <p>Fringilla pulvinar fermentum nunc augue id conubia luctus sociosqu himenaeos dictum duis lobortis penatibus class nascetur fames pulvinar varius pulvinar</p>
-                    <p>Dignissim nascetur fringilla ligula luctus nisl habitasse ut ac sociis nisi tristique consectetur potenti curae nascetur pellentesque duis odio ornare</p>
-                    <p>Vestibulum sem consectetur iaculis torquent lobortis dis libero risus parturient</p>
-                </div>
-            </div>
-            <div class="gap gap-small"></div>
-            <div class="row row-col-gap">
-                <div class="col-md-6">
-                    <h3 class="widget-title">The Community</h3>
-                    <p>Vestibulum congue litora fusce aenean at facilisi volutpat lorem mi consequat natoque tincidunt eget etiam nascetur iaculis iaculis non ultricies</p>
-                    <p>Metus porta lobortis convallis lacinia integer platea cum pharetra duis nulla lectus himenaeos hac condimentum viverra condimentum morbi maecenas elit vestibulum vulputate nisl dignissim mus lacus sem euismod venenatis at</p>
-                    <p>Varius mattis rutrum nostra habitant feugiat condimentum faucibus taciti porttitor</p>
-                </div>
-                <div class="col-md-6">
-                    {!!HTML::image("img/550x210.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
-                </div>
-            </div>
-            <div class="gap gap-small"></div>
-            <div class="row row-col-gap">
-                <div class="col-md-9">
-                    <div class="row row-sm-gap" data-gutter="10">
-                        <div class="col-md-2">
-                            {!!HTML::image("img/300x300.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h3 class="widget-title">Perú</h3>
+                            <ul class="contact-list">
+                                <li>
+                                    <h5>Correo</h5><a href="#">contacto@zonngo.com</a>
+                                </li>
+                                <li>
+                                    <h5>Número telefónico</h5>
+                                    <p>+51-968518655</p>
+                                </li>
+                                <li>
+                                    <h5>Skype</h5>
+                                    <p>Zonngo</p>
+                                </li>
+                                <li>
+                                    <h5>Dirección</h5><address>250 Los Pinos, San Isidro<br />Lima</address>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="col-md-2">
-                            {!!HTML::image("img/300x300.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
+                        <div class="col-md-4">
+                            <h3 class="widget-title">France</h3>
+                            <ul class="contact-list">
+                                <li>
+                                    <h5>Email</h5><a href="#">fr@thebox.com</a>
+                                </li>
+                                <li>
+                                    <h5>Phone Number</h5>
+                                    <p>+01-77-44-48-34</p>
+                                </li>
+                                <li>
+                                    <h5>Skype</h5>
+                                    <p>TheBoxFr</p>
+                                </li>
+                                <li>
+                                    <h5>Address</h5><address>46, Square de la Couronne<br />91120 PALAISEAU</address>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="col-md-2">
-                            {!!HTML::image("img/300x300.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
-                        </div>
-                        <div class="col-md-2">
-                            {!!HTML::image("img/300x300.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
-                        </div>
-                        <div class="col-md-2">
-                            {!!HTML::image("img/300x300.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
-                        </div>
-                        <div class="col-md-2">
-                            {!!HTML::image("img/300x300.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
-                        </div>
-                        <div class="col-md-2">
-                            {!!HTML::image("img/300x300.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
-                        </div>
-                        <div class="col-md-2">
-                            {!!HTML::image("img/300x300.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
-                        </div>
-                        <div class="col-md-2">
-                            {!!HTML::image("img/300x300.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
-                        </div>
-                        <div class="col-md-2">
-                            {!!HTML::image("img/300x300.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
-                        </div>
-                        <div class="col-md-2">
-                            {!!HTML::image("img/300x300.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
-                        </div>
-                        <div class="col-md-2">
-                            {!!HTML::image("img/300x300.png","Image Alternative text",["title"=>"Image Title","class"=>"full-width"])!!}
+                        <div class="col-md-4">
+                            <h3 class="widget-title">Italy</h3>
+                            <ul class="contact-list">
+                                <li>
+                                    <h5>Email</h5><a href="#">it@thebox.com</a>
+                                </li>
+                                <li>
+                                    <h5>Phone Number</h5>
+                                    <p>+09451-52-19-40</p>
+                                </li>
+                                <li>
+                                    <h5>Skype</h5>
+                                    <p>TheBoxIt</p>
+                                </li>
+                                <li>
+                                    <h5>Address</h5><address>Via Francesco Saverio Nitti, 28<br />Roma, 00156</address>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <h3 class="widget-title">Behind The Scenes</h3>
-                    <p>Mi suspendisse sodales condimentum cum maecenas conubia massa morbi tristique ante iaculis sociosqu fusce lobortis phasellus nisi massa praesent torquent</p>
-                    <p>Ultricies nullam ornare vitae justo ipsum nisi inceptos cursus blandit</p>
-                    <p>Ipsum convallis quisque iaculis lectus orci facilisis maecenas mauris tristique</p>
-                </div>
             </div>
-            <div class="gap gap-small"></div>
         </div>
+        <div class="gap gap-small"></div>
 
         <footer class="main-footer">
             <div class="container">
@@ -424,28 +438,18 @@
             </div>
         </div>
     </div>
-   {!!HTML::Script("js/jquery.js")!!}
-    <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
-    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
-        <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-69401607-1', 'auto');
-    ga('send', 'pageview');
-    </script>
-    {!!HTML::Script("js/bootstrap.js")!!}
-    {!!HTML::Script("js/getItems.js")!!}
-    {!!HTML::Script("js/icheck.js")!!}
-    {!!HTML::Script("js/ionrangeslider.js")!!}
-    {!!HTML::Script("js/jqzoom.js")!!}
-    {!!HTML::Script("js/card-payment.js")!!}
-    {!!HTML::Script("js/owl-carousel.js")!!}
-    {!!HTML::Script("js/magnific.js")!!}
-    {!!HTML::Script("js/custom.js")!!}
-    {!!HTML::script("js/highcharts/highcharts.js")!!}
-    {!!HTML::script("js/highcharts/highcharts-more.js")!!}
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/icheck.js"></script>
+    <script src="js/ionrangeslider.js"></script>
+    <script src="js/jqzoom.js"></script>
+    <script src="js/card-payment.js"></script>
+    <script src="js/owl-carousel.js"></script>
+    <script src="js/magnific.js"></script>
+    <script src="js/custom.js"></script>
+
+
+
 
 
 </body>

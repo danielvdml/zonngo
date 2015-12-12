@@ -12,7 +12,9 @@
 */
 // INDEX Inicio de la Pagina
 
-Route::get('/',["as"=>"index","uses"=>"ProductosController@demo"]);
+Route::get('/',["as"=>"index","uses"=>"ProductosController@index"]);
+Route::get('/demo',["as"=>"demo","uses"=>"ProductosController@demo"]);
+
 Route::get('getListCategory',["uses"=>"ProductosController@getListCategory","as"=>"getListCategory"]);
 Route::get('getListMarca/{Category}',["uses"=>"ProductosController@getListMarca","as"=>"getListMarca"]);
 Route::get('getListModelo/{Category}/{Marca}',["uses"=>"ProductosController@getListModelo","as"=>"getListModelo"]);
@@ -21,9 +23,9 @@ Route::get('getItems/{keyword}',['uses'=>"ProductosController@getItems","as"=>"g
 Route::get('getList',['uses'=>"Productos	Controller@getList","as"=>"getList"]);
 Route::get('getList_',['uses'=>"ProductosController@getList_","as"=>"getList_"]);
 Route::get("getImage",["uses"=>"ProductosController@getImage"]);
-Route::resource("Registrar","RegistrarController");
-Route::resource("Nosotros","NosotrosController");
-Route::resource("Ingresar","IngresarController");
+Route::resource("registrar","RegistrarController");
+Route::resource("nosotros","NosotrosController");
+Route::resource("ingresar","IngresarController");
 Route::resource('contacto', 'ContactoController');
 
 
