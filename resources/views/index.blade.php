@@ -53,7 +53,7 @@
                 <div class="navbar-header">
                     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Menu Principal</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href={{route("index")}}>
                         {!!HTML::image("img/logo12.png","Image Alternative text",["title"=>"Image title"])!!}
                     </a>
                 </div>
@@ -169,7 +169,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li><a href="#"><i class="fa fa-tags dropdown-menu-category-icon"></i>Fármacos</a>
+                                <li><a href={{route("Medicamento.index")}}><i class="fa fa-tags dropdown-menu-category-icon"></i>Fármacos</a>
                                     <div class="dropdown-menu-category-section">
                                         <div class="dropdown-menu-category-section-inner">
                                             <div class="dropdown-menu-category-section-content">
@@ -314,7 +314,7 @@
                                         
                                         <h3 class="panel-title">Artículo Nuevo <a href="" id="nuevo-desc"></a></h3>
                                     </div>
-                                    <div class="panel-body " >
+                                    <div class="panel-body "  style="padding:0px">
                                         <div class="table-responsive">
                                             <table class="table table-bordered table-hover" style="border-color:#ff7500;">
                                                 <thead>
@@ -334,7 +334,7 @@
                                     </div>
                                 </div>
                                 <div id="table-nuevo" class="col-xs-12" style="padding:5px;">
-                                    <div class="table-responsive">
+                                    <div class="table-responsive" style="padding:0px">
                                     <table class="table table-striped ">
                                         <thead>
                                             <tr>
@@ -1210,7 +1210,7 @@
                     </a>
                 </div>
                 <div class="col-md-2">
-                    <a class="banner-category" href="#">
+                    <a class="banner-category" href={{route("Medicamento.index")}}>
                         {!!HTML::image("img/farmaco.png","Image Alternative text",["class"=>"banner-category-img","title"=>"Image Title"])!!}
                         <h5 class="banner-category-title">Fármacos</h5>
                         <p class="banner-category-desc">15 000 productos</p>

@@ -2,8 +2,9 @@
 <html>
 
 <head>
-    <title>Zonngo-Contáctanos</title>
+    <title>Zonngo</title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta charset="UTF-8">
     <meta content="utf-8" http-equiv="encoding">
     <meta name="keywords" content="Template, html, premium, themeforest" />
     <meta name="description" content="TheBox - premium e-commerce template">
@@ -11,17 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href='http://fonts.googleapis.com/css?family=Roboto:500,300,700,400italic,400' rel='stylesheet' type='text/css'>
-    <!-- <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'> -->
-    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'> -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/mystyles.css">
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    {!!HTML::style("css/bootstrap.css")!!}
+    {!!HTML::style("css/font-awesome.css")!!}
+    {!!HTML::style("css/styles.css")!!}
+    {!!HTML::style("css/mystyles.css")!!}
 </head>
 
 <body>
+    <input type="hidden"  id="urlIndex" class="form-control" value={{route("index")}} >
     <div class="global-wrapper clearfix" id="global-wrapper">
         <div class="navbar-before mobile-hidden">
             <div class="container">
@@ -31,9 +32,9 @@
                     </div>
                     <div class="col-md-6">
                         <ul class="nav navbar-nav navbar-right navbar-right-no-mar">
-                            <li><a href="#">Nosotros</a>
+                            <li><a href="{{route('nosotros.index')}}">Nosotros</a>
                             </li>
-                            <li><a href="#">Contáctanos</a>
+                            <li><a href="{{route('contacto.index')}}">Contáctanos</a>
                             </li>
                             <li><a href="#">Consultas</a>
                             </li>
@@ -53,7 +54,7 @@
                     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Menu Principal</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href={{route("index")}}>
-                        <img src="img/logo12.png" alt="Image Alternative text" title="Image Title" />
+                        {!!HTML::image("img/logo12.png","Image Alternative text",["title"=>"Image title"])!!}
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -244,118 +245,216 @@
                         </li>
                         
                     </ul>
-                    <form class="navbar-form navbar-left navbar-main-search" role="search">
+                    <div class="navbar-form navbar-left navbar-main-search" role="search">
                         <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Busca recomendaciones..." />
+                            <input type="text" class="form-control" id="tags"  placeholder="Fármaco" />
                         </div>
-                        <a class="fa fa-search navbar-main-search-submit" href="#"></a>
-                    </form>
+                        <button class="fa fa-search navbar-main-search-submit" id="search"></button>
+                        <input type="hidden"  id="urlMed" class="form-control" value={{route("Medicamento.index")}}>
+                    </div>
 
                 </div>
             </div>
         </nav>
+         
+         <style>
+            table {
+                width: 100%;
+                display:block;
+            }
+            thead {
+                display: inline-block;
+                width: 100%;
+                height: 40px;
+            }
+            tbody {
+                height: 200px;
+                display: inline-block;
+                width: 100%;
+                overflow: auto;
+            }
+         </style>
+		<div class="row">
+			<!-- <div class="col-xs-12 col-md-4">
+				<select  id="SelectUbicacion" class="form-control" required="required">
+					
+				</select>
+			</div> -->
+			<div class="col-xs-12 col-md-offset-4 col-md-6">
+				<div class="table-responsive">
+					<table class="col-xs-12 table table-striped table-hover" >
+						<thead>
+							<tr>
+								<th class='col-xs-3'>Medicamento</th>
+								<th class='col-xs-3'>Marca</th>
+								<th class='col-xs-3'>Establecimiento</th>
+								<th class='col-xs-3'>Precio</th>
+							</tr>
+						</thead>
+						<tbody id="body-Medicamentos">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 
-        <div class="container">
-            <header class="page-header">
-                <h1 class="page-title">Contáctanos</h1>
-            </header>
-            <div class="row">
-                <div class="col-md-9">
-                    <p class="lead">Podemos comunicarnos desde cualquier parte de latinoamerica o del mundo</p>
+		<!-- Carouserl -->
+        <div class="owl-carousel owl-loaded owl-nav-dots-inner" data-options='{"items":1,"loop":true}'>
+            <div class="owl-item">
+                <div class="slider-item" style="background-color:#3D3D3D;">
+                    <div class="container">
+                        <div class="slider-item-inner">
+                            <div class="slider-item-caption-left slider-item-caption-white">
+                                <h4 class="slider-item-caption-title">La forma más fácil de poner precios</h4>
+                                <p class="slider-item-caption-desc">Usa nuestras referencias para poner los precios justos a tus productos.</p><a class="btn btn-lg btn-ghost btn-white" href="#">Calcular precio</a>
+                            </div>
+                            {!!HTML::image("img/test_slider/14.png","Image Alternative text",["title"=>"Image Title","class"=>"slider-item-img-right","style"=>"top: 60%; width: 56%;"])!!}
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="gap gap-small"></div>
-            <div class="row" data-gutter="60">
-                <div class="col-md-5">
-                    <h3 class="widget-title">Déjanos un mensaje</h3>
-                    <p class="text-muted">Escríbenos y te responderemos lo más pronto posible</p>
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Nombre</label>
-                                    <input class="form-control" type="text" />
-                                </div>
+            <div class="owl-item">
+                <div class="slider-item" style="background-image:url(img/1200xx500.jpg);">
+                    <div class="container">
+                        <div class="slider-item-inner">
+                            <div class="slider-item-caption-right slider-item-caption-white">
+                                <h4 class="slider-item-caption-title">Encuentro los precios más cómodos del mercado</h4>
+                                <p class="slider-item-caption-desc">Productos nuevos y usados para tu alcance.</p><a class="btn btn-lg btn-ghost btn-white" href="#">Buscar productos</a>
                             </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Correo</label>
-                                    <input class="form-control" type="text" />
-                                </div>
-                            </div>
+                            {!!HTML::image("img/test_slider/1.png","Image Alternative text",["class"=>"slider-item-img-left","title"=>"Image Title","style"=>"transform:translateY(-50%) rotate(14deg); width: 55%;"])!!}
                         </div>
-                        <div class="form-group">
-                            <label>Mensaje</label>
-                            <textarea class="form-control"></textarea>
-                        </div>
-                        <input class="btn btn-primary" type="submit" value="Send a Message" />
-                    </form>
+                    </div>
                 </div>
-                <div class="col-md-7">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <h3 class="widget-title">Perú</h3>
-                            <ul class="contact-list">
-                                <li>
-                                    <h5>Correo</h5><a href="#">contacto@zonngo.com</a>
-                                </li>
-                                <li>
-                                    <h5>Número telefónico</h5>
-                                    <p>+51-968518655</p>
-                                </li>
-                                <li>
-                                    <h5>Skype</h5>
-                                    <p>Zonngo</p>
-                                </li>
-                                <li>
-                                    <h5>Dirección</h5><address>250 Los Pinos, San Isidro<br />Lima</address>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <h3 class="widget-title">France</h3>
-                            <ul class="contact-list">
-                                <li>
-                                    <h5>Email</h5><a href="#">fr@thebox.com</a>
-                                </li>
-                                <li>
-                                    <h5>Phone Number</h5>
-                                    <p>+01-77-44-48-34</p>
-                                </li>
-                                <li>
-                                    <h5>Skype</h5>
-                                    <p>TheBoxFr</p>
-                                </li>
-                                <li>
-                                    <h5>Address</h5><address>46, Square de la Couronne<br />91120 PALAISEAU</address>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <h3 class="widget-title">Italy</h3>
-                            <ul class="contact-list">
-                                <li>
-                                    <h5>Email</h5><a href="#">it@thebox.com</a>
-                                </li>
-                                <li>
-                                    <h5>Phone Number</h5>
-                                    <p>+09451-52-19-40</p>
-                                </li>
-                                <li>
-                                    <h5>Skype</h5>
-                                    <p>TheBoxIt</p>
-                                </li>
-                                <li>
-                                    <h5>Address</h5><address>Via Francesco Saverio Nitti, 28<br />Roma, 00156</address>
-                                </li>
-                            </ul>
+            </div>
+            <div class="owl-item">
+                <div class="slider-item" style="background-color:#93282B;">
+                    <div class="container">
+                        <div class="slider-item-inner">
+                            <div class="slider-item-caption-left slider-item-caption-white">
+                                <h4 class="slider-item-caption-title">Compra! Compra! Compra!</h4>
+                                <p class="slider-item-caption-desc">Las personas buscan los precios más accesibles y estos se agotan.</p><a class="btn btn-lg btn-ghost btn-white" href="#">Buscar productos</a>
+                            </div>
+                            {!!HTML::image("img/test_slider/6.png","Image Alternative text",["class"=>"slider-item-img-right","title"=>"Image Title"])!!}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="gap gap-small"></div>
 
+        <div class="gap"></div>
+         <div class="container">            
+	        <div class="row" data-gutter="15">
+	            <div class="col-md-4">
+	                <div class="banner" style="background-color:#72121C;">
+	                    <a class="banner-link" href="#"></a>
+	                    <div class="banner-caption-left">
+	                        <h5 class="banner-title"> Moda </h5>
+	                        <p class="banner-desc">Las últimas tendencias del mercado.</p>
+	                        <p class="banner-shop-now">Buscar ahora<i class="fa fa-caret-right"></i>
+	                        </p>
+	                    </div>
+	                    {!!HTML::image("img/test_slider/3.png","Image Alternative text",["class"=>"banner-img","title"=>"Image Title","style"=>"bottom: 5px; right: -20px;"])!!}
+	                </div>
+	            </div>
+	            <div class="col-md-4">
+	                <div class="banner" style="background-color:#4172FF;">
+	                    <a class="banner-link" href="#"></a>
+	                    <div class="banner-caption-left">
+	                        <h5 class="banner-title">Celulares</h5>
+	                        <p class="banner-desc">Apasionados a los Smarthphones.</p>
+	                        <p class="banner-shop-now">Buscar ahora <i class="fa fa-caret-right"></i>
+	                        </p>
+	                    </div>
+	                    <div class="img-responsive">
+	                    {!!HTML::image("img/test_slider/17.png","Image Alternative text",["class"=>"banner-img","title"=>"Image Title","style"=>"bottom: 0px;  right: 1px;"])!!}
+	                    </div>
+	                </div>
+	            </div>
+	            <div class="col-md-4">
+	                <div class="banner" style="background-color:#444C50;">
+	                    <a class="banner-link" href="#"></a>
+	                    <div class="banner-caption-left">
+	                        <h5 class="banner-title">Consolas</h5>
+	                        <p class="banner-desc">Revive momentos especiales.</p>
+	                        <p class="banner-shop-now">Buscar ahora <i class="fa fa-caret-right"></i>
+	                        </p>
+	                    </div>
+	                    {!!HTML::image("img/test_slider/13.png","Image Alternative text",["class"=>"banner-img","title"=>"Image Title","style"=>"bottom: 0px; right: -10px; width: 250px;"])!!}
+	                </div>
+	            </div>
+	        </div>
+
+        <div class="gap"></div>
+        
+
+            
+
+        <div class="gap"></div>
+        <div class="slider-item-sm" style="background-color:#E66514;">
+            <div class="container">
+                <div class="slider-item-inner">
+                    <div class="slider-item-caption-left slider-item-caption-white">
+                        <h4 class="slider-item-caption-title">Es el momento de cambiar de Smartphone</h4>
+                        <p class="slider-item-caption-desc">Miles de opciones a tu medida</p><a class="btn btn-lg btn-ghost btn-white" href="#">Comprar ahora</a>
+                    </div>
+                    {!!HTML::image("img/test_slider/7.png","Image Alternative text",["class"=>"slider-item-img","title"=>"Image Title","style"=>"right: 0; bottom: 0; width: 22%;"])!!}
+                </div>
+            </div>
+        </div>
+
+        <div class="gap"></div>
+
+        <!-- Catálogo de Producto -->
+        <div class="container">
+            <h3 class="widget-title-lg">Catálogo de productos</h3>
+            <div class="row row-sm-gap" data-gutter="15">
+                <div class="col-md-2">
+                    <a class="banner-category" href="#">
+                        {!!HTML::image("img/smartphone.png","Image Alternative text",["class"=>"banner-category-img","title"=>"Image Title"])!!}
+                        <h5 class="banner-category-title">Celulares y Smarthphone</h5>
+                        <p class="banner-category-desc">40 000 productos</p>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="banner-category" href="#">
+                        {!!HTML::image("img/farmaco.png","Image Alternative text",["class"=>"banner-category-img","title"=>"Image Title"])!!}
+                        <h5 class="banner-category-title">Fármacos</h5>
+                        <p class="banner-category-desc">15 000 productos</p>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="banner-category" href="#">
+                        {!!HTML::image("img/auto.png","Image Alternative text",["class"=>"banner-category-img","title"=>"Image Title"])!!}
+                        <h5 class="banner-category-title">Vehículos</h5>
+                        <p class="banner-category-desc">500 productos</p>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="banner-category" href="#">
+                        {!!HTML::image("img/diesel.png","Image Alternative text",["class"=>"banner-category-img","title"=>"Image Title"])!!}
+                        <h5 class="banner-category-title">Gasolina y Diesel</h5>
+                        <p class="banner-category-desc">250 ubicaciones</p>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="banner-category" href="#">
+                        {!!HTML::image("img/inmueble.png","Image Alternative text",["class"=>"banner-category-img","title"=>"Image Title"])!!}
+                        <h5 class="banner-category-title">Inmuebles</h5>
+                        <p class="banner-category-desc">1 500 inmuebles</p>
+                    </a>
+                </div>
+                <div class="col-md-2">
+                    <a class="banner-category" href="#">
+                        {!!HTML::image("img/alimentos.png","Image Alternative text",["class"=>"banner-category-img","title"=>"Image Title"])!!}
+                        <h5 class="banner-category-title">Alimentos</h5>
+                        <p class="banner-category-desc">300 productos</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="gap"></div>
+
+		<!-- footer -->
         <footer class="main-footer">
             <div class="container">
                 <div class="row row-col-gap" data-gutter="60">
@@ -424,7 +523,7 @@
                     </li>
 
                 </ul>
-                <img class="main-footer-img" src="img/test_slider/12.png" alt="Image Alternative text" title="Image Title" " style=" style="right: 0; bottom: 0; width: 22%;"/>
+                {!!HTML::image("img/test_slider/12.png","Image Alternative text",["class"=>"main-footer-img","title"=>"Image Title","style"=>"right: 0; bottom: 0; width: 22%;"])!!}
             </div>
         </footer>
         <div class="copyright-area">
@@ -438,19 +537,55 @@
             </div>
         </div>
     </div>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/icheck.js"></script>
-    <script src="js/ionrangeslider.js"></script>
-    <script src="js/jqzoom.js"></script>
-    <script src="js/card-payment.js"></script>
-    <script src="js/owl-carousel.js"></script>
-    <script src="js/magnific.js"></script>
-    <script src="js/custom.js"></script>
+
+        <style type="text/css">
+                tr {
+                    width: 100%;
+                    -moz-width: 100%;
+                    -webkit-display: inline-table;
+                    display: inline-table;
+                    -moz-display: inline-table;
+                    -webkit-display: inline-table;
+                }
+                
+                #body-usado,#body-nuevo{
+                    -webkit-overflow-y: scroll;
+                    overflow-y: scroll;
+                    -moz-overflow-y: scroll;
+                    -webkit-width: 100%;
+                    width: 100%;
+                    -moz-width: 100%;
+                    -webkit-position: absolute;
+                    position: absolute;
+                    -moz-position: absolute;
+                }
+        </style>
+        
+    {!!HTML::Script("js/jquery.js")!!}
+    <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js" ></script>
+        <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-69401607-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    {!!HTML::Script("js/bootstrap.js")!!}
+    {!!HTML::Script("js/Medicamento.js")!!}
+    {!!HTML::Script("js/icheck.js")!!}
+    {!!HTML::Script("js/ionrangeslider.js")!!}
+    {!!HTML::Script("js/jqzoom.js")!!}
+    {!!HTML::Script("js/card-payment.js")!!}
+    {!!HTML::Script("js/owl-carousel.js")!!}
+    {!!HTML::Script("js/magnific.js")!!}
+    {!!HTML::Script("js/custom.js")!!}
+    {!!HTML::script("js/highcharts/highcharts.js")!!}
+    {!!HTML::script("js/highcharts/highcharts-more.js")!!}
 
 
-
-
+    
 
 </body>
 

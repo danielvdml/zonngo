@@ -52,7 +52,7 @@
                 <div class="navbar-header">
                     <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Menu Principal</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href={{route("index")}}>
                         {!!HTML::image("img/logo12.png","Image Alternative text",["title"=>"Image Title"])!!}
                     </a>
                 </div>

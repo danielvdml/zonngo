@@ -27,5 +27,5 @@ Route::resource("registrar","RegistrarController");
 Route::resource("nosotros","NosotrosController");
 Route::resource("ingresar","IngresarController");
 Route::resource('contacto', 'ContactoController');
-
+Route::resource("Medicamento","MedicamentoController");
 

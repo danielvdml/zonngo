@@ -1,0 +1,33 @@
+/* CSS Document */
+
+.formulario{
+	padding-top:30px;
+	padding-bottom:30px;
+    font-size: 16px;
+}
+.form-imagen{
+	padding-bottom: 30px
+}
+
+.pad{
+	padding-top:10px;
+	padding-bottom:4px;	
+}
+
+.title{
+	text-align:left;
+	font-size:48px;
+	font-family:Constantia, "Lucida Bright", "DejaVu Serif", Georgia, serif;
+	padding-bottom:20px;
+	padding-top:20px;
+	padding-left:20px;	
+}
+
+.modulo{
+	position:absolute;
+	top:10%;	
+	left:10%;
+	width:80%;
+	border-radius:solid black 2px;
+}
+
